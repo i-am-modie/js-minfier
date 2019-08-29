@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="js_minifucker"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="D:/win10/Users/modei.DESKTOP-SF7FFFO/WorkSpace/polsl/js-minifucker/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/win10/Users/modei.DESKTOP-SF7FFFO/WorkSpace/polsl/js-minifucker/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/win10/Users/modei.DESKTOP-SF7FFFO/WorkSpace/polsl/js-minifucker/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/win10/Users/modei.DESKTOP-SF7FFFO/WorkSpace/polsl/js-minifucker/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/win10/Users/modei.DESKTOP-SF7FFFO/WorkSpace/polsl/js-minifucker/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="D:/win10/Users/modei.DESKTOP-SF7FFFO/WorkSpace/polsl/js-minifucker/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/win10/Users/modei.DESKTOP-SF7FFFO/WorkSpace/polsl/js-minifucker/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/win10/Users/modei.DESKTOP-SF7FFFO/WorkSpace/polsl/js-minifucker/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/win10/Users/modei.DESKTOP-SF7FFFO/WorkSpace/polsl/js-minifucker/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/win10/Users/modei.DESKTOP-SF7FFFO/WorkSpace/polsl/js-minifucker/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="js_minifucker">
+				<Option output="D:/win10/Users/modei.DESKTOP-SF7FFFO/WorkSpace/polsl/js-minifucker/cmake-build-debug/js_minifucker.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/win10/Users/modei.DESKTOP-SF7FFFO/WorkSpace/polsl/js-minifucker/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="D:/win10/Users/modei.DESKTOP-SF7FFFO/WorkSpace/polsl/js-minifucker/."/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/4.8.1/include/c++"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/4.8.1/include/c++/mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/4.8.1/include/c++/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/4.8.1/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/4.8.1/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/4.8.1/include-fixed"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/win10/Users/modei.DESKTOP-SF7FFFO/WorkSpace/polsl/js-minifucker/cmake-build-debug/Makefile&quot;  VERBOSE=1 js_minifucker"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/win10/Users/modei.DESKTOP-SF7FFFO/WorkSpace/polsl/js-minifucker/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/win10/Users/modei.DESKTOP-SF7FFFO/WorkSpace/polsl/js-minifucker/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/win10/Users/modei.DESKTOP-SF7FFFO/WorkSpace/polsl/js-minifucker/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="js_minifucker/fast">
+				<Option output="D:/win10/Users/modei.DESKTOP-SF7FFFO/WorkSpace/polsl/js-minifucker/cmake-build-debug/js_minifucker.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/win10/Users/modei.DESKTOP-SF7FFFO/WorkSpace/polsl/js-minifucker/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="D:/win10/Users/modei.DESKTOP-SF7FFFO/WorkSpace/polsl/js-minifucker/."/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/4.8.1/include/c++"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/4.8.1/include/c++/mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/4.8.1/include/c++/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/4.8.1/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/4.8.1/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/4.8.1/include-fixed"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/win10/Users/modei.DESKTOP-SF7FFFO/WorkSpace/polsl/js-minifucker/cmake-build-debug/Makefile&quot;  VERBOSE=1 js_minifucker/fast"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/win10/Users/modei.DESKTOP-SF7FFFO/WorkSpace/polsl/js-minifucker/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/win10/Users/modei.DESKTOP-SF7FFFO/WorkSpace/polsl/js-minifucker/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/win10/Users/modei.DESKTOP-SF7FFFO/WorkSpace/polsl/js-minifucker/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="D:/win10/Users/modei.DESKTOP-SF7FFFO/WorkSpace/polsl/js-minifucker/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/win10/Users/modei.DESKTOP-SF7FFFO/WorkSpace/polsl/js-minifucker/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/win10/Users/modei.DESKTOP-SF7FFFO/WorkSpace/polsl/js-minifucker/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/win10/Users/modei.DESKTOP-SF7FFFO/WorkSpace/polsl/js-minifucker/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/win10/Users/modei.DESKTOP-SF7FFFO/WorkSpace/polsl/js-minifucker/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="D:/win10/Users/modei.DESKTOP-SF7FFFO/WorkSpace/polsl/js-minifucker/lex.yy.c">
+			<Option target="js_minifucker"/>
+		</Unit>
+		<Unit filename="D:/win10/Users/modei.DESKTOP-SF7FFFO/WorkSpace/polsl/js-minifucker/parser.tab.c">
+			<Option target="js_minifucker"/>
+		</Unit>
+		<Unit filename="D:/win10/Users/modei.DESKTOP-SF7FFFO/WorkSpace/polsl/js-minifucker/parser.tab.h">
+			<Option target="js_minifucker"/>
+		</Unit>
+		<Unit filename="D:/win10/Users/modei.DESKTOP-SF7FFFO/WorkSpace/polsl/js-minifucker/symtab.c">
+			<Option target="js_minifucker"/>
+		</Unit>
+		<Unit filename="D:/win10/Users/modei.DESKTOP-SF7FFFO/WorkSpace/polsl/js-minifucker/symtab.h">
+			<Option target="js_minifucker"/>
+		</Unit>
+		<Unit filename="D:/win10/Users/modei.DESKTOP-SF7FFFO/WorkSpace/polsl/js-minifucker/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

@@ -1,0 +1,4 @@
+D:\win10\Users\modei.DESKTOP-SF7FFFO\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\191.7479.33\bin\cmake\win\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" D:\win10\Users\modei.DESKTOP-SF7FFFO\WorkSpace\polsl\js-minifucker
+-- Configuring done
+-- Generating done
+-- Build files have been written to: D:/win10/Users/modei.DESKTOP-SF7FFFO/WorkSpace/polsl/js-minifucker/cmake-build-debug
