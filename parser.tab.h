@@ -71,14 +71,15 @@ extern int yydebug;
     RBRACK = 281,
     LBRACE = 282,
     RBRACE = 283,
-    SEMI = 284,
-    DOT = 285,
-    COMMA = 286,
-    ASSIGN = 287,
-    ID = 288,
-    ICONST = 289,
-    FCONST = 290,
-    STRING = 291
+    COLON = 284,
+    SEMI = 285,
+    DOT = 286,
+    COMMA = 287,
+    ASSIGN = 288,
+    ID = 289,
+    ICONST = 290,
+    FCONST = 291,
+    STRING = 292
   };
 #endif
 

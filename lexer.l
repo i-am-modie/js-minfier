@@ -57,7 +57,7 @@ STRING      (\"{print}*\")|(\'{print}*\')
 "&&"                    { return ANDOP; }
 "!"                     { return NOTOP; }
 "=="|"!="               { return EQUOP; }
-"==="|"!=="               { return IDOP; }
+"==="|"!=="             { return IDOP; }
 ">"|"<"|">="|"<="       { return RELOP; }
  
  
@@ -68,6 +68,7 @@ STRING      (\"{print}*\")|(\'{print}*\')
 "{"             { return LBRACE; }
 "}"             { return RBRACE; }
 ";"             { return SEMI; }
+":"             { return COLON; }
 "."             { return DOT; }
 ","             { return COMMA; }
 "="             { return ASSIGN; }

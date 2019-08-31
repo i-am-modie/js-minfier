@@ -13,7 +13,7 @@
 /* token definition */
 %token VAR IF ELSE DO WHILE FOR CONTINUE BREAK FUNCTION RETURN 
 %token ADDOP MULOP DIVOP INCR OROP ANDOP NOTOP EQUOP IDOP RELOP
-%token LPAREN RPAREN LBRACK RBRACK LBRACE RBRACE SEMI DOT COMMA ASSIGN
+%token LPAREN RPAREN LBRACK RBRACK LBRACE RBRACE COLON SEMI DOT COMMA ASSIGN
 %token ID ICONST FCONST STRING 
 
 %start program
@@ -76,8 +76,8 @@ expression:
     LPAREN expression RPAREN |
     assigment |
     sign constant |
-    variable |
-    array
+    array | 
+    object
 ;
 
 array: LBRACK expressions RBRACK ;
@@ -93,6 +93,13 @@ function_declaration: FUNCTION ID LPAREN ids RPAREN tail;
 ids: ids COMMA ID | ID | /* empty */ ;
 
 function_call: ID LPAREN expressions RPAREN SEMI;
+
+object: LBRACE kvps RBRACE;
+
+kvps: kvps COMMA kvp | kvp | /* empty */;
+
+kvp: ID COLON expression
+
 %%
 
 void yyerror (char const *s)
