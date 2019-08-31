@@ -1,3 +1,4 @@
+#include<stdio.h>
 /* maximum size of hash table */
 #define SIZE 211
  

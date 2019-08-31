@@ -37,7 +37,7 @@ STRING      (\"{print}*\")|(\'{print}*\')
 <ML_COMMENT>"\n"        { lineno += 1; }
  
  
-"var"|"VAR"           { return VAR; }
+"var"|"VAR"             { return VAR; }
 "if"|"IF"               { return IF; }
 "else"|"ELSE"           { return ELSE; }
 "while"|"WHILE"         { return WHILE; }
@@ -63,8 +63,8 @@ STRING      (\"{print}*\")|(\'{print}*\')
  
 "("             { return LPAREN; }
 ")"             { return RPAREN; }
-"]"             { return LBRACK; }
-"["             { return RBRACK; }
+"["             { return LBRACK; }
+"]"             { return RBRACK; }
 "{"             { return LBRACE; }
 "}"             { return RBRACE; }
 ";"             { return SEMI; }
