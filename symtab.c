@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include "symtab.h"
+#include "randomString.h"
  
 /* current scope */
 int cur_scope = 0;
@@ -31,6 +32,8 @@ void insert(char *name, int len, int type, int lineno){
         strncpy(l->st_name, name, len);  
         /* add to hashtable */
         l->st_type = type;
+        char* new_name = randstring(6);
+        strncpy(l->new_name, new_name, 6);
         l->scope = cur_scope;
         l->lines = (RefList*) malloc(sizeof(RefList));
         l->lines->lineno = lineno;

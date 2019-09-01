@@ -37,6 +37,7 @@ typedef struct RefList{
 // struct that represents a list node
 typedef struct list_t{
     char st_name[MAXTOKENLEN];
+    char new_name[MAXTOKENLEN];
     int st_size;
     int scope;
     RefList *lines;
