@@ -1,4 +1,4 @@
-var i; 
+var i = 2+2;
 var dupa = "2137";
 var tab = [1];
 i = {};
@@ -16,6 +16,12 @@ return;
 
 // functions
 function operation (value, i){    /* function declaration */
-    res = value*i + i;
+    res 
+    =
+     value
+    *
+    i 
+    + 
+    i;
     return res;
 }

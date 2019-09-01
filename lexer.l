@@ -49,16 +49,23 @@ STRING      (\"{print}*\")|(\'{print}*\')
 "do"|"DO"               { return DO; }
  
  
-"+"|"-"                 { return ADDOP; }
+"+"                     { return ADDOP; }
+"-"                     { return SUBOP; }
 "*"                     { return MULOP; }
 "/"                     { return DIVOP; }
-"++"|"--"               { return INCR; }
+"++"                    { return INCR; }
+"--"                    { return DECR; }
 "||"                    { return OROP; }
 "&&"                    { return ANDOP; }
 "!"                     { return NOTOP; }
-"=="|"!="               { return EQUOP; }
-"==="|"!=="             { return IDOP; }
-">"|"<"|">="|"<="       { return RELOP; }
+"=="                    { return EQUOP; }
+"!="                    { return NEQUOP; }
+"==="                   { return IDOP; }
+"==="                   { return NIDOP; }
+">"                     { return GROP; }
+"<"                     { return LSOP; }
+">="                    { return GREOP; }
+"<="                    { return LSEOP; }
  
  
 "("             { return LPAREN; }

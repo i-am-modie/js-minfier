@@ -7,14 +7,24 @@
     extern FILE *yyout;
     extern int lineno;
     extern int yylex();
-    void yyerror(char const *s);
+    void yyerror();
 %}
 
 /* token definition */
 %token VAR IF ELSE DO WHILE FOR CONTINUE BREAK FUNCTION RETURN 
-%token ADDOP MULOP DIVOP INCR OROP ANDOP NOTOP EQUOP IDOP RELOP
+%token ADDOP SUBOP MULOP DIVOP INCR DECR OROP ANDOP NOTOP EQUOP NEQUOP IDOP NIDOP GROP LSOP GREOP LSEOP
 %token LPAREN RPAREN LBRACK RBRACK LBRACE RBRACE COLON SEMI DOT COMMA ASSIGN
 %token ID ICONST FCONST STRING 
+
+%left LPAREN RPAREN LBRACK RBRACK
+%right NOTOP INCR DECR
+%left MULOP DIVOP
+%left ADDOP SUBOP
+%left EQUOP NEQUOP IDOP NIDOP
+%left OROP 
+%left ANDOP 
+%right ASSIGN 
+%left COMMA 
 
 %start program
 
@@ -26,22 +36,20 @@ statements: statements statement | statement;
 
 statement:
     if_statement | for_statement | do_while_statement | while_statement | assigment SEMI | declaration SEMI |
-    CONTINUE SEMI | BREAK SEMI | returns | function_call | function_declaration
+    CONTINUE SEMI | BREAK SEMI | returns | function_call | function_declaration | variable pre_post_operation SEMI | pre_post_operation variable SEMI | 
 ;
 
 returns: RETURN SEMI | RETURN variable SEMI;
 
 variable: ID | ID array_position;
 
-declaration: initialization ID assign;
-
-initialization: VAR | /* empty */;
+declaration: VAR ID assign_tail;
 
 array_position: LBRACK ICONST RBRACK | LBRACK ID RBRACK;
 
-assigment: variable assign;
+assigment: variable assign_tail;
 
-assign: ASSIGN expression | /* empty */;
+assign_tail: ASSIGN expression | /* empty */;
 
 if_statement: IF LPAREN expression RPAREN tail else_if_part else_part;
 
@@ -53,7 +61,7 @@ else_if_part:
 
 else_part: ELSE tail | /* empty */ ; 
 
-for_statement: FOR LPAREN expression SEMI expression SEMI expression RPAREN tail ;
+for_statement: FOR LPAREN assigment SEMI expression SEMI expression RPAREN tail ;
 
 while_statement: WHILE LPAREN expression RPAREN tail ;
 
@@ -62,29 +70,29 @@ do_while_statement: DO tail WHILE RPAREN expression RPAREN ;
 tail: statement SEMI | LBRACE statements RBRACE ;
 
 expression:
-    expression ADDOP expression |
-    expression MULOP expression |
-    expression DIVOP expression |
-    expression INCR |
-    INCR expression |
-    expression OROP expression |
-    expression ANDOP expression |
-    NOTOP expression |
-    expression EQUOP expression |
-    expression RELOP expression |
-    expression IDOP expression |
+    expression operation expression |   
+    expression pre_post_operation |
+    pre_post_operation expression |
     LPAREN expression RPAREN |
-    assigment |
-    sign constant |
     array | 
-    object
+    variable |
+    object |
+    sign constant |
 ;
+
+operation: ADDOP | SUBOP | MULOP | DIVOP | OROP | ANDOP | equality_operation | relation_operation; 
+
+equality_operation: EQUOP | NEQUOP | IDOP | NIDOP;
+
+relation_operation: GROP | LSOP | GREOP | LSEOP;
+
+pre_post_operation: INCR | DECR ;
 
 array: LBRACK expressions RBRACK ;
 
 expressions: expressions COMMA expression | expression | /* empty */;
 
-sign: ADDOP | /* empty */;
+sign: SUBOP | /* empty */;
 
 constant: ICONST | FCONST | STRING;
 
@@ -102,15 +110,18 @@ kvp: ID COLON expression
 
 %%
 
-void yyerror (char const *s)
+void yyerror ()
 {
   fprintf(stderr, "Syntax error at line %d\n", lineno);
-  fprintf (stderr, "%s\n", s);
   exit(1);
 }
 
 int main (int argc, char *argv[]){
-
+    #ifdef YYDEBUG
+    if(argv[2]){
+        yydebug= abs(strcmp( argv[2], "-d "));
+    }
+    #endif
     init_hash_table();
 
     int flag;

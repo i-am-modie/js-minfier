@@ -34,7 +34,7 @@
 # define YY_YY_PARSER_TAB_H_INCLUDED
 /* Debug traces.  */
 #ifndef YYDEBUG
-# define YYDEBUG 0
+# define YYDEBUG 1
 #endif
 #if YYDEBUG
 extern int yydebug;
@@ -56,30 +56,37 @@ extern int yydebug;
     FUNCTION = 266,
     RETURN = 267,
     ADDOP = 268,
-    MULOP = 269,
-    DIVOP = 270,
-    INCR = 271,
-    OROP = 272,
-    ANDOP = 273,
-    NOTOP = 274,
-    EQUOP = 275,
-    IDOP = 276,
-    RELOP = 277,
-    LPAREN = 278,
-    RPAREN = 279,
-    LBRACK = 280,
-    RBRACK = 281,
-    LBRACE = 282,
-    RBRACE = 283,
-    COLON = 284,
-    SEMI = 285,
-    DOT = 286,
-    COMMA = 287,
-    ASSIGN = 288,
-    ID = 289,
-    ICONST = 290,
-    FCONST = 291,
-    STRING = 292
+    SUBOP = 269,
+    MULOP = 270,
+    DIVOP = 271,
+    INCR = 272,
+    DECR = 273,
+    OROP = 274,
+    ANDOP = 275,
+    NOTOP = 276,
+    EQUOP = 277,
+    NEQUOP = 278,
+    IDOP = 279,
+    NIDOP = 280,
+    GROP = 281,
+    LSOP = 282,
+    GREOP = 283,
+    LSEOP = 284,
+    LPAREN = 285,
+    RPAREN = 286,
+    LBRACK = 287,
+    RBRACK = 288,
+    LBRACE = 289,
+    RBRACE = 290,
+    COLON = 291,
+    SEMI = 292,
+    DOT = 293,
+    COMMA = 294,
+    ASSIGN = 295,
+    ID = 296,
+    ICONST = 297,
+    FCONST = 298,
+    STRING = 299
   };
 #endif
 
