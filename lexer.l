@@ -8,8 +8,8 @@
     #include "parser.tab.h"
     extern FILE *yyin;
     extern FILE *yyout;
-   
-    int lineno = 1; // initialize to 1
+
+    int lineno = 1; 
     void ret_print(char *token_type);
     void yyerror();
     list_t* current_id = NULL;
@@ -82,7 +82,7 @@ STRING      (\"{print}*\")|(\'{print}*\')
  
  
 {ID}            {
-                    insert(yytext, strlen(yytext), UNDEF, lineno);
+                    insert(yytext, strlen(yytext) );
                     current_id = lookup(yytext);
                     fprintf(yyout, "%s%s", "v", current_id->new_name);
                     return ID;

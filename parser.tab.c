@@ -1669,8 +1669,8 @@ int main (int argc, char *argv[]){
     yyin = fopen(argv[1], "r");
     flag = yyparse();
     fclose(yyin);
-
     fclose(yyout);
-    
+    clear_hash_table();
+
     return flag;
 }
