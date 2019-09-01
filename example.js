@@ -1,27 +1,17 @@
-var i = 2+2;
-var dupa = "2137";
-var tab = [1];
-i = {};
-var dupofix = { test: 1, test2: dupa};
-i = { test2: dupa};
+var test="test";
+var test=7;
+var test=21.30;
+var test2 = {test3: "wcale nie dupa" };
+test2.test3 = "";
 
-// statements
-for(i = 0; i < 10; i++){
-    val = res[i];
-    print('\n', 'x');
-    print(res[i]);
+for(i = 0; i< 10 ; i++){
+    test2.test3 = i;
+    continue;
 }
 
-return;
-
-// functions
-function operation (value, i){    /* function declaration */
-    res 
-    =
-     value
-    *
-    i 
-    + 
-    i;
-    return res;
+while(1==1){
+    test=2;
 }
+
+
+

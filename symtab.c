@@ -33,14 +33,14 @@ void insert(char *name, int len, int type, int lineno){
         /* add to hashtable */
         l->st_type = type;
         char* new_name = randstring(6);
-        strncpy(l->new_name, new_name, 6);
+        strcpy(l->new_name, new_name);
         l->scope = cur_scope;
         l->lines = (RefList*) malloc(sizeof(RefList));
         l->lines->lineno = lineno;
         l->lines->next = NULL;
         l->next = hash_table[hashval];
         hash_table[hashval] = l;
-        printf("Inserted %s for the first time with linenumber %d!\n", name, lineno); // error checking
+        // printf("Inserted %s for the first time with linenumber %d!\n", name, lineno); // error checking
     }
     /* found in table, so just add line number */
     else{
@@ -51,7 +51,7 @@ void insert(char *name, int len, int type, int lineno){
         t->next = (RefList*) malloc(sizeof(RefList));
         t->next->lineno = lineno;
         t->next->next = NULL;
-        printf("Found %s again at line %d!\n", name, lineno);
+        // printf("Found %s again at line %d!\n", name, lineno);
     }
 }
  
@@ -61,23 +61,7 @@ list_t *lookup(char *name){ /* return symbol if found or NULL if not found */
     while ((l != NULL) && (strcmp(name,l->st_name) != 0)) l = l->next;
     return l; // NULL is not found
 }
- 
-list_t *lookup_scope(char *name, int scope){ /* return symbol if found or NULL if not found */
-    unsigned int hashval = hash(name);
-    list_t *l = hash_table[hashval];
-    while ((l != NULL) && (strcmp(name,l->st_name) != 0) && (scope != l->scope)) l = l->next;
-    return l; // NULL is not found
-}
- 
-void hide_scope(){ /* hide the current scope */
-    if(cur_scope > 0) cur_scope--;
-}
- 
-void incr_scope(){ /* go to next scope */
-    cur_scope++;
-}
- 
-/* print to stdout by default */
+
 void symtab_dump(FILE * of){  
   int i;
   fprintf(of,"------------ ------ ------------\n");
