@@ -10,7 +10,6 @@
     extern FILE *yyout;
 
     int lineno = 1; 
-    void ret_print(char *token_type);
     void yyerror();
     list_t* current_id = NULL;
 %}
@@ -29,10 +28,10 @@ STRING      (\"{print}*\")|(\'{print}*\')
  
 %%
  
-"//".*                  { /* printf("Eat up comment at line %d\n", lineno); */ }
+"//".*                  
  
-"/*"                    { /* printf("Eat up comment from line %d ", lineno); */ BEGIN(ML_COMMENT); }
-<ML_COMMENT>"*/"        { /* printf("to line %d\n", lineno); */ BEGIN(INITIAL); }
+"/*"                    { BEGIN(ML_COMMENT); }
+<ML_COMMENT>"*/"        { BEGIN(INITIAL); }
 <ML_COMMENT>[^*\n]+    
 <ML_COMMENT>"*"        
 <ML_COMMENT>"\n"        { lineno += 1; }
@@ -92,8 +91,8 @@ STRING      (\"{print}*\")|(\'{print}*\')
 {STRING}        { fprintf(yyout, "%s", yytext); return STRING; }
 
 "\n"            { lineno += 1; }
-[ \t\r\f]+          /* eat up whitespace */
+[ \t\r\f]+          
  
-.               { yyerror("Unrecognized character"); }
+.               { yyerror("Nie rozpoznano"); }
  
 %%

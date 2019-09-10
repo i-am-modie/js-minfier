@@ -1,5 +1,5 @@
 #include<stdio.h>
-/* maximum size of hash table */
+/* maksymalny rozmiar tablicy hashujacej */
 #define SIZE 211
  
 #define MAXLEN 40
@@ -7,7 +7,6 @@
 typedef struct list_t{
     char st_name[MAXLEN];
     char new_name[MAXLEN];
-    int st_size;
     struct list_t *next;
 }list_t;
  

@@ -11,7 +11,6 @@
     void yyerror();
 %}
 
-/* token definition */
 %token VAR IF ELSE DO WHILE FOR CONTINUE BREAK FUNCTION RETURN 
 %token ADDOP SUBOP MULOP DIVOP INCR DECR OROP ANDOP NOTOP EQUOP NEQUOP IDOP NIDOP GROP LSOP GREOP LSEOP
 %token LPAREN RPAREN LBRACK RBRACK LBRACE RBRACE COLON SEMI DOT COMMA ASSIGN
@@ -62,7 +61,7 @@ else_if_part:
 
 else_part: ELSE tail | /* empty */ ; 
 
-for_statement: FOR LPAREN assigment SEMI expression SEMI expression RPAREN tail ;
+for_statement: FOR LPAREN declaration SEMI expression SEMI expression RPAREN tail ;
 
 while_statement: WHILE LPAREN expression RPAREN tail ;
 
@@ -115,7 +114,7 @@ kvp: ID COLON expression
 
 void yyerror ()
 {
-  fprintf(stderr, "Syntax error at line %d\n", lineno);
+  fprintf(stderr, "Blad w linii %d\n", lineno);
   exit(1);
 }
 
@@ -125,12 +124,14 @@ int main (int argc, char *argv[]){
         yydebug= abs(strcmp( argv[2], "-d "));
     }
     #endif
+
     init_hash_table();
+    yyin = fopen(argv[1], "r");
     yyout = fopen("minified.js", "w");
 
     int flag;
-    yyin = fopen(argv[1], "r");
     flag = yyparse();
+
     fclose(yyin);
     fclose(yyout);
     clear_hash_table();
