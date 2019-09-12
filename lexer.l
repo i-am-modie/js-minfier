@@ -82,7 +82,7 @@ STRING      (\"{print}*\")|(\'{print}*\')
  
 {ID}            {
                     insert(yytext, strlen(yytext) );
-                    current_id = lookup(yytext);
+                    current_id = lookup(yytext, strlen(yytext));
                     fprintf(yyout, "%s%s", "v", current_id->new_name);
                     return ID;
                 } 

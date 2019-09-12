@@ -1,16 +1,15 @@
-var test="test";
-var test=7;
-var test=21.30;
-var test2 = {test3: "wcale nie"};
-test2.test3 = "";
-
+var zmienna="test";
+var tablica = [2,1,7];
+var objekt = {test3: "wcale nie"};
+objekt.test3 = "";
+tablica[0] = tablica[0] + tablica[1];
 for(var i = 0; i< 10 ; i++){
-    test2.test3 = i;
+    objekt.test3 = i;
     continue;
 }
 
 while(1==1){
-    test=2;
+    zmienna=2;
 }
 
 

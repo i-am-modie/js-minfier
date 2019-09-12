@@ -125,6 +125,11 @@ int main (int argc, char *argv[]){
     }
     #endif
 
+    if(!argv[1]){
+        printf("Brak scieżki do pliku .js");
+        return 2;
+    }
+
     init_hash_table();
     yyin = fopen(argv[1], "r");
     yyout = fopen("minified.js", "w");
